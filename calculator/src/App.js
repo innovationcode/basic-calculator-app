@@ -35,15 +35,17 @@ class App extends React.Component{
     return (
       <div className="App">
         <h1>Calculator</h1>
-        <div>
+        <div className = "calculator">
             <div style = {{borderRadius : "5%", 
-                           width :"73%", 
-                           border: "2px solid red", 
+                           width :"78%", 
+                           border: "2px solid black", 
+                           borderRadius:"10px",
                            height: "50px", 
-                           marginLeft: "85px", 
-                           marginBottom : "30px",
+                           marginLeft: "65px", 
+                           marginBottom : "50px",
                            fontWeight: "bold",
-                           fontSize: "35px"}}> { this.state.result }
+                           fontSize: "35px",
+                           backgroundColor: "cornsilk"}}> { this.state.result }
             </div>
             
             {/* First Row  */}
