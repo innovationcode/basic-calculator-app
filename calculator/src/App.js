@@ -8,6 +8,14 @@ class App extends React.Component{
       <div className="App">
         <h1>Calculator</h1>
         <div>
+            <div style = {{borderRadius : "5%", 
+                           width :"73%", 
+                           border: "2px solid red", 
+                           height: "50px", 
+                           marginLeft: "85px", 
+                           marginBottom : "30px"}}> { }
+            </div>
+            
             {/* First Row  */}
             <ul>
               <li>1</li>
