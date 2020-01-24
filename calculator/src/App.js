@@ -9,6 +9,26 @@ class App extends React.Component{
 
   handleButtonClick = (value) => {
       console.log(value);
+      if(value === 'C'){ //Clear -- clear all states
+          this.setState({
+              equation: [],
+              result: ''
+          })
+      } else if(value === '=') {
+          //calculate retult and update state
+          const answer = eval(this.state.equation.join(''));
+          this.setState({
+              equation : [],
+              result: answer,
+          })
+      } else {
+          //keep updating equation
+          const newEquation = [...this.state.equation, value];
+          this.setState({
+              equation: newEquation,
+              result: newEquation
+          })
+      }
   }
 
   render() {
@@ -44,10 +64,10 @@ class App extends React.Component{
 
             {/* Third Row  */}
             <ul>
-              <li onClick = {() => this.handleButtonClick(1)}>7</li>
-              <li onClick = {() => this.handleButtonClick(1)}>8</li>
-              <li onClick = {() => this.handleButtonClick(1)}>9</li>
-              <li onClick = {() => this.handleButtonClick(1)}>*</li>
+              <li onClick = {() => this.handleButtonClick(7)}>7</li>
+              <li onClick = {() => this.handleButtonClick(8)}>8</li>
+              <li onClick = {() => this.handleButtonClick(9)}>9</li>
+              <li onClick = {() => this.handleButtonClick('*')}>*</li>
             </ul>
             
             {/* Forth Row  */}
