@@ -45,7 +45,9 @@ class App extends React.Component{
                            marginBottom : "50px",
                            fontWeight: "bold",
                            fontSize: "35px",
-                           backgroundColor: "cornsilk"}}> { this.state.result }
+                           backgroundColor: "cornsilk",
+                           textAlign:"right",
+                           paddingRight: "8px"}}> { this.state.result }
             </div>
             
             {/* First Row  */}
