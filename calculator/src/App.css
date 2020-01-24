@@ -13,5 +13,6 @@ li {
   border-radius: 50%;
   padding : 20px 28px;
   margin-left: 20px;
-  font-size: 2em;  
+  font-size: 2em; 
+  font-weight: bold; 
 }
