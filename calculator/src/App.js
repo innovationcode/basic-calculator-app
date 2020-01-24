@@ -18,7 +18,7 @@ class App extends React.Component{
           //calculate retult and update state
           const answer = eval(this.state.equation.join(''));
           this.setState({
-              equation : [],
+              equation : [answer],
               result: answer,
           })
       } else {
@@ -53,7 +53,9 @@ class App extends React.Component{
               <li onClick = {() => this.handleButtonClick(1)}>1</li>
               <li onClick = {() => this.handleButtonClick(2)}>2</li>
               <li onClick = {() => this.handleButtonClick(3)}>3</li>
-              <li onClick = {() => this.handleButtonClick('+')}>+</li>
+              <li className = "operationButton" 
+                  onClick = {() => this.handleButtonClick('+')}
+                  style = {{fontSize: "23px", padding: "26px 28px"}}>+</li>
             </ul>
 
             {/* Second Row  */}
@@ -61,7 +63,7 @@ class App extends React.Component{
               <li onClick = {() => this.handleButtonClick(4)}>4</li>
               <li onClick = {() => this.handleButtonClick(5)}>5</li>
               <li onClick = {() => this.handleButtonClick(6)}>6</li>
-              <li onClick = {() => this.handleButtonClick('-')}>-</li>
+              <li className = "operationButton" onClick = {() => this.handleButtonClick('-')}>-</li>
             </ul>
 
             {/* Third Row  */}
@@ -69,15 +71,15 @@ class App extends React.Component{
               <li onClick = {() => this.handleButtonClick(7)}>7</li>
               <li onClick = {() => this.handleButtonClick(8)}>8</li>
               <li onClick = {() => this.handleButtonClick(9)}>9</li>
-              <li onClick = {() => this.handleButtonClick('*')}>*</li>
+              <li className = "operationButton" onClick = {() => this.handleButtonClick('*')}>*</li>
             </ul>
             
             {/* Forth Row  */}
             <ul>
               <li onClick = {() => this.handleButtonClick('C')}>C</li>
               <li onClick = {() => this.handleButtonClick(0)}>0</li>
-              <li onClick = {() => this.handleButtonClick('=')}>=</li>
-              <li onClick = {() => this.handleButtonClick('/')}>/</li>
+              <li className = "operationButton" onClick = {() => this.handleButtonClick('=')}>=</li>
+              <li className = "operationButton" onClick = {() => this.handleButtonClick('/')}>/</li>
             </ul>
         </div>
       </div>

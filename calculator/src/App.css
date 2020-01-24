@@ -2,6 +2,11 @@
   text-align: center;
 }
 
+h1 {
+  font-size: 50px;
+  color: crimson;
+}
+
 .calculator {
   background-color: rgb(58, 57, 57);
   /* border : 3px solid red; */
@@ -29,4 +34,13 @@ li {
   font-weight: bold; 
   cursor: pointer;
   background-color: cornsilk;
+}
+
+.operationButton {
+    background-color: rgb(182, 40, 68);
+    color: honeydew;
+    font-size: 35px;
+    height: 60px;
+    widows: 50px;
+
 }
